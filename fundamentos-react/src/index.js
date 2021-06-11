@@ -1,13 +1,14 @@
-// Importando arquivos do node_modules
 import ReactDOM from 'react-dom'
 import React from 'react'
 
-// Importando arquivos criados
-import App from './App'
+import './index.css'
+import Primeiro from './components/basicos/Primeiro'
 
+const tag = <strong> Olá React </strong>
 
 ReactDOM.render(
-    <App />
-    ,
+    <div>
+        <Primeiro></Primeiro>
+    </div>, 
     document.getElementById('root')
-)
+    )
