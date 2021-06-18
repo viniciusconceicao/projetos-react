@@ -1,6 +1,7 @@
 import React from 'react'
 
 import produtos from "../data/Produtos"
+import './TabelaProdutos.css'
 
 export default props =>{
     const listProdutos = produtos.map((produto) =>{
@@ -12,19 +13,30 @@ export default props =>{
     }
     )
 
+
+    function getLinhas(){
+        return produtos.map((produto, i) =>{
+            return (
+                <tr className={i % 2 === 0 ? 'Par' : 'Impar'}>
+                    <td>{produto.idProduto}</td>
+                    <td>{produto.nomeProduto}</td>
+                    <td>{produto.Preco.toFixed(2).replace('.',',')}</td>
+                </tr>
+            )
+        })
+    }
+
     return (
-        <div>
+        <div className="TabelaProdutos">
             <table border="1" style={{listStyle: "none"}}>
                 <thead>
-                    <tr>Id</tr>
-                    <tr>Nome</tr>
-                    <tr>Preço</tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Preço</th>
                 </thead>
 
                 <tbody>
-                    <tr>{listProdutos}</tr>
-                    <tr></tr>
-                    <tr></tr>
+                    {getLinhas()}
                 </tbody>
             </table>
         </div>
