@@ -12,6 +12,10 @@ import Familia from './componentes/basicos/Familia'
 import FamiliaMembro from './componentes/basicos/FamiliaMembro'
 import ListaAlunos from './componentes/repeticao/ListaAlunos'
 import TabelaProdutos from './componentes/repeticao/TabelaProdutos'
+import ParOuImpar from './componentes/condicional/ParOuImpar'
+import UsuarioInfo from './componentes/condicional/UsuarioInfo'
+import DiretaFilho from './comunicacao/DiretaFilho'
+import DiretaPai from './comunicacao/DiretaPai'
 
 export default _ =>
 
@@ -19,6 +23,19 @@ export default _ =>
         <h1>Fundamentos React </h1>
 
         <div className='Cards'>
+
+
+        <Card titulo="Comunicação direta">
+            <DiretaPai></DiretaPai>
+        </Card>
+
+
+        <Card titulo="Renderização">
+            <ParOuImpar numero={21}></ParOuImpar>
+            <UsuarioInfo usuario={{nome: 'Fernando'}}></UsuarioInfo>
+            <UsuarioInfo usuario={{email: 'fern@ando.com'}}></UsuarioInfo>
+        </Card>
+
 
 
         <Card titulo="Desafio Produtos">
