@@ -10,6 +10,8 @@ import Aleatorio from './componentes/basicos/Aleatorio'
 import Card from './componentes/layout/Card'
 import Familia from './componentes/basicos/Familia'
 import FamiliaMembro from './componentes/basicos/FamiliaMembro'
+import ListaAlunos from './componentes/repeticao/ListaAlunos'
+import TabelaProdutos from './componentes/repeticao/TabelaProdutos'
 
 export default _ =>
 
@@ -18,8 +20,21 @@ export default _ =>
 
         <div className='Cards'>
 
+
+        <Card titulo="Desafio Produtos">
+            <TabelaProdutos></TabelaProdutos>
+        </Card>
+
+
+
+        <Card titulo="Repetição">
+            <ListaAlunos></ListaAlunos>
+        </Card>
+
+
+
         <Card titulo="Componente com filhos">
-            <Familia sobrenome="Ferreira">
+            <Familia sobrenome="Silva">
             <FamiliaMembro nome="Pedro"></FamiliaMembro>
             <FamiliaMembro nome="Ana"></FamiliaMembro>
             <FamiliaMembro nome="Gustavo"></FamiliaMembro>
@@ -32,12 +47,12 @@ export default _ =>
         </Card>
 
 
-        <Card titulo="Desafio Aleatório">
+        <Card titulo="Fragmento">
             <Fragmento />
         </Card>
 
 
-        <Card titulo="Desafio Aleatório">
+        <Card titulo="Com Parametros">
             <ComParametro
                 titulo="Situação do aluno:"
                 aluno="Maria"
@@ -45,7 +60,7 @@ export default _ =>
         </Card>
 
 
-        <Card titulo="Desafio Aleatório">
+        <Card titulo="Primeiro">
             <Primeiro />
         </Card>
         </div>
